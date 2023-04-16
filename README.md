@@ -13,7 +13,7 @@ git clone https://github.com/iamravi1/notes_api_docker.git
 ```
 ### Install the dependencies:
 ```
-cd notes-app-api
+cd notes-api-docker
 npm install
 ```
 ### Set the following environment variables:
