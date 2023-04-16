@@ -13,7 +13,7 @@ git clone https://github.com/iamravi1/notes_api_docker.git
 ```
 ### Install the dependencies:
 ```
-cd notes-api-docker
+cd notes-app-api
 npm install
 ```
 ### Set the following environment variables:
@@ -32,6 +32,7 @@ The following endpoints are available:
 - `PUT api/notes/:id`: update an existing note by ID
 - `DELETE api/notes/:id`: delete a note by ID
 The request and response formats for each endpoint are as follows:
+**Postman collection link: 🔗 [click-here](https://www.postman.com/ravi-s-kl/workspace/notes-api/request/20367997-b1c5d899-7e73-4a2a-8514-aae215a6f813)**
 
 GET api/notes
 
@@ -111,3 +112,14 @@ docker build -t notes-app-api .
 docker run -p 3000:3000 notes-app-api
 ```
 The API will be available at http://localhost:3000.
+
+### Explanation:
+Docker Compose is a useful tool for defining and running multi-container Docker applications. With Docker Compose, you can define the services, networks, and volumes required by your application in a single YAML file. This makes it easy to start up your entire application stack with just one command.
+
+Using Docker Compose simplifies the process of deploying a complex application. You can define multiple containers and the relationships between them in a single file. This helps manage dependencies between containers, making it easy to start, stop, and scale your application as needed.
+
+To build our notes app, we will use a Dockerfile. This file contains instructions on how to build a Docker image, which can then be used to create a container for our notes app.
+
+With the docker-compose.yml file, we can build the notes-api image and pull the mongo image from Docker Hub. The mongo container will bind to port 27017, while the notes-api container will bind to port 3000.
+
+Overall, Docker Compose and the Dockerfile are powerful tools that simplify the deployment process for complex applications. They allow developers to easily manage multiple containers and dependencies, making it easy to scale applications as needed.
