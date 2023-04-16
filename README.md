@@ -105,6 +105,14 @@ Note deleted
 ## Docker
 To build and run the Docker container for this API:
 
+### Repository in Docker Hub
+
+https://hub.docker.com/repository/docker/iamravi1/notes-app-api/general
+
+### Docker Hub linkto pull the image
+
+https://hub.docker.com/repository/docker/iamravi1/notes-app-api/tags?page=1&ordering=last_updated
+
 ### Build the Docker image:
 ```
 docker build -t notes-app-api .
