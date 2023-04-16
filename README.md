@@ -113,6 +113,12 @@ https://hub.docker.com/repository/docker/iamravi1/notes-app-api/general
 
 https://hub.docker.com/repository/docker/iamravi1/notes-app-api/tags?page=1&ordering=last_updated
 
+### Command to pull the docker image
+
+```
+docker pull iamravi1/notes-app-api:1.0
+```
+
 ### Build the Docker image:
 ```
 docker build -t notes-app-api .
