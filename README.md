@@ -9,7 +9,7 @@ This is a REST API for a basic notes app that allows users to create, edit, dele
 ## Installation
 ### Clone the repository:
 ```
-git clone https://github.com/your-username/notes-app-api.git
+git clone https://github.com/iamravi1/notes_api_docker.git
 ```
 ### Install the dependencies:
 ```
@@ -26,36 +26,30 @@ npm start
 ### Usage
 The following endpoints are available:
 
-- GET /notes: fetch all notes
-- GET /notes/:id: fetch a specific note by ID
-- POST /notes: create a new note
-- PUT /notes/:id: update an existing note by ID
-- DELETE /notes/:id: delete a note by ID
+- `GET api/notes`: fetch all notes
+- `GET api/notes/:id`: fetch a specific note by ID
+- `POST api/notes/create`: create a new note
+- `PUT api/notes/:id`: update an existing note by ID
+- `DELETE api/notes/:id`: delete a note by ID
 The request and response formats for each endpoint are as follows:
 
-GET /notes
-Request
-None
+GET api/notes
 
 Response
 json
 ```
 [
   {
-
     "title": "Note 1",
     "content": "This is the content of Note 1."
   },
   {
-    "id": "2",
     "title": "Note 2",
     "content": "This is the content of Note 2."
   }
 ]
 ```
-GET /notes/:id
-Request
-None
+GET api/notes/:id
 
 Response
 json
@@ -66,9 +60,8 @@ json
   "content": "This is the content of Note 1."
 }
 ```
-POST /notes
-Request
-json
+POST api/notes
+
 ```
 {
   "title": "Note 3",
@@ -85,8 +78,6 @@ json
 }
 ```
 PUT /notes/:id
-Request
-json
 ```
 {
   "title": "Updated Note",
@@ -103,11 +94,10 @@ json
 }
 ```
 DELETE /notes/:id
-Request
-None
 
-Response
-None
+```
+Note deleted
+```
 
 ## Docker
 To build and run the Docker container for this API:
@@ -121,7 +111,3 @@ docker build -t notes-app-api .
 docker run -p 3000:3000 notes-app-api
 ```
 The API will be available at http://localhost:3000.
-
-### License
-This project is licensed under the MIT License.
-# note_api_docker
