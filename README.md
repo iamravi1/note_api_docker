@@ -31,8 +31,10 @@ The following endpoints are available:
 - `POST api/notes/create`: create a new note
 - `PUT api/notes/:id`: update an existing note by ID
 - `DELETE api/notes/:id`: delete a note by ID
-The request and response formats for each endpoint are as follows:
+
 **Postman collection link: 🔗 [click-here](https://www.postman.com/ravi-s-kl/workspace/notes-api/request/20367997-b1c5d899-7e73-4a2a-8514-aae215a6f813)**
+
+The request and response formats for each endpoint are as follows:
 
 GET api/notes
 
