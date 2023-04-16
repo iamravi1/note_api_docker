@@ -7,6 +7,11 @@ This is a REST API for a basic notes app that allows users to create, edit, dele
 - Express.js
 - mongoose
 ## Installation
+### Command to pull the docker image
+
+```
+docker pull iamravi1/notes-app-api:1.0
+```
 ### Clone the repository:
 ```
 git clone https://github.com/iamravi1/notes_api_docker.git
