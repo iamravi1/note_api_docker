@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  api:
+    build: .
+    image: notes-api:1.0
+    container_name: notes-api
+    ports: 
+      - 3000:3000
+    environment:
+      DB_URL: mongodb://db/notes
+  mongodb:
+    image: mongo
+    container_name: db
+    ports:
+     - 27017:27017
+    volumes:
+     - notes:/data/db
+volumes:
+  notes:
+

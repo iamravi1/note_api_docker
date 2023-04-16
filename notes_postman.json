@@ -1,0 +1,133 @@
+{
+    "info": {
+        "name": "api",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "notes",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/",
+                    "path": [
+                        ""
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "create-note",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/notes/create",
+                    "path": [
+                        "notes",
+                        "create"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \n  \"title\":\"hello\",\n  \"content\":\"welcome to app\"\n}"
+                }
+            }
+        },
+        {
+            "name": "get-note",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/notes/643a7e4c6849cff93c83f622",
+                    "path": [
+                        "notes",
+                        "643a7e4c6849cff93c83f622"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "update-note",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost:3000/notes/643a7e4c6849cff93c83f622",
+                    "path": [
+                        "notes",
+                        "643a7e4c6849cff93c83f622"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"title\":\"Hello\",\n  \"content\":\"welcome\"\n}"
+                }
+            }
+        },
+        {
+            "name": "delete-note",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:3000/notes/643a7e4c6849cff93c83f622",
+                    "path": [
+                        "notes",
+                        "643a7e4c6849cff93c83f622"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "get-all-notes",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/notes/",
+                    "path": [
+                        "notes"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        }
+    ]
+}
