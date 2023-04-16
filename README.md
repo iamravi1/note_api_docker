@@ -109,7 +109,7 @@ To build and run the Docker container for this API:
 
 https://hub.docker.com/repository/docker/iamravi1/notes-app-api/general
 
-### Docker Hub linkto pull the image
+### Docker Hub link to pull the image
 
 https://hub.docker.com/repository/docker/iamravi1/notes-app-api/tags?page=1&ordering=last_updated
 
