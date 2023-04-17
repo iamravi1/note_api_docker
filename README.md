@@ -24,7 +24,7 @@ This application is containerized using Docker and is composed of two containers
 1. Clone the repository and navigate to the project directory.
 
 ```
-git clone https://github.com/Sindhuinti/notes-api-docker.git
+git clone https://github.com/iamravi1/notes_api_docker.git
 cd notes-api-docker
 ```
 
