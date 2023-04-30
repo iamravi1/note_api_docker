@@ -3,6 +3,7 @@ pipeline {
     environment {
         IMAGE_NAME = 'iamravi1/notes-app-api'
         CONTAINER_NAME = 'api'
+        BUILD_NUMBER = '2.0'
     }
     stages {
         stage('Checkout') {
@@ -15,7 +16,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    docker.build("${env.IMAGE_NAME}:${BUILD_NUMBER}")
+                    docker.build("${env.IMAGE_NAME}:${env.BUILD_NUMBER}")
                 }
             }
         }
@@ -26,7 +27,7 @@ pipeline {
                                                  passwordVariable: 'DOCKER_PASSWORD')]) {
                     script {
                         docker.withRegistry("https://registry.hub.docker.com", "dockerhub") {
-                            dockerImagePush("${env.IMAGE_NAME}:${BUILD_NUMBER}")
+                            dockerImagePush("${env.IMAGE_NAME}:${env.BUILD_NUMBER}")
                         }
                     }
                 }
@@ -36,7 +37,7 @@ pipeline {
             steps {
                 sh "docker stop ${env.CONTAINER_NAME} || true"
                 sh "docker rm ${env.CONTAINER_NAME} || true"
-                sh "docker run -d --name ${env.CONTAINER_NAME} -p 5000:3000 ${env.IMAGE_NAME}:${BUILD_NUMBER}"
+                sh "docker run -d --name ${env.CONTAINER_NAME} -p 5000:3000 ${env.IMAGE_NAME}:${env.BUILD_NUMBER}"
             }
         }
     }
